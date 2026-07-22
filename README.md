@@ -1,8 +1,8 @@
-
 # GameJam2026 🎮
 
-## Structure du projet
+## Project Structure
 
+```text
 Assets/
 ├── Art/
 │   ├── Sprites/
@@ -35,4 +35,4 @@ Assets/
 │
 ├── ScriptableObjects/
 └── Settings/
-
+```
