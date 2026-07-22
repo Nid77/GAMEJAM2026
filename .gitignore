@@ -1,0 +1,60 @@
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+
+# Asset Bundles
+/[Aa]ssets/AssetStoreTools*
+
+# Visual Studio / Rider
+.vs/
+.idea/
+.gradle/
+
+ExportedObj/
+.consulo/
+
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Unity generated
+sysinfo.txt
+
+# Crash Reports
+crashlytics-build.properties
+
+# Addressables
+ServerData/
+
+# Recordings
+Recordings/
+
+# Builds
+*.apk
+*.aab
+*.exe
+*.app
+*.ipa
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+#User setting
+UserSettings/
