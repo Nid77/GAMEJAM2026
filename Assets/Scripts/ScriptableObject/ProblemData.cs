@@ -1,12 +1,13 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 [CreateAssetMenu(fileName = "ProblemData", menuName = "Game/ProblemData")]
 public class ProblemData : ScriptableObject
 {
     public string title;
     [TextArea] public string questionText;
-    public Sprite icon;
+    public Image image;
     public List<ProblemAnswer> answers;
 }
 

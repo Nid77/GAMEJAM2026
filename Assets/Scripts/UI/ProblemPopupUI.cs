@@ -30,7 +30,7 @@ public class ProblemPopupUI : MonoBehaviour
 
         titleText.text = data.title;
         questionText.text = data.questionText;
-        iconImage.sprite = data.icon;
+        iconImage = data.image;
 
         ClearAnswerButtons();
         foreach (var answer in data.answers)

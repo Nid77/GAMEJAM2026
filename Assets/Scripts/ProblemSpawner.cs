@@ -10,11 +10,15 @@ public class ProblemSpawner : MonoBehaviour
     [SerializeField] private List<ProblemData> problemPool;
     [SerializeField] private float spawnInterval = 5f;
     [SerializeField] private int maxActiveProblems = 8;
+    private Transform problemParent;
 
     private List<Problem> activeProblems = new();
     private float timer;
 
-    private void Awake() { Instance = this; }
+    private void Awake() { 
+        Instance = this; 
+        problemParent = this.transform;
+    }
 
     private void Update()
     {
@@ -30,16 +34,11 @@ public class ProblemSpawner : MonoBehaviour
     private void SpawnProblem()
     {
         var zone = ZoneManager.Instance.GetRandomZone();
-        Debug.Log($"Spawning problem in zone: {zone.name}");
         var pos = zone.GetRandomPoint();
-        Debug.Log($"Spawning problem at position: {pos}");
-        var data = problemPool[UnityEngine.Random.Range(0, problemPool.Count-1)];
-        Debug.Log($"Spawning problem with data: {data.name}");
+        var data = problemPool[UnityEngine.Random.Range(0, problemPool.Count)];
 
-        var go = Instantiate(problemPrefab, pos, Quaternion.identity);
-        Debug.Log($"Instantiated problem prefab: {go.name}");
+        var go = Instantiate(problemPrefab, pos, Quaternion.identity, problemParent);
         var problem = go.GetComponent<Problem>();
-        Debug.Log($"Got Problem component: {problem.name}");
         problem.data = data;
         activeProblems.Add(problem);
     }
