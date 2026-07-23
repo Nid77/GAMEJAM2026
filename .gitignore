@@ -10,6 +10,7 @@
 /[Aa]ssets/AssetStoreTools*
 
 # Visual Studio / Rider
+.vscode/
 .vs/
 .idea/
 .gradle/
@@ -20,6 +21,7 @@ ExportedObj/
 *.csproj
 *.unityproj
 *.sln
+*.slnx
 *.suo
 *.tmp
 *.user
@@ -58,3 +60,7 @@ desktop.ini
 
 #User setting
 UserSettings/
+
+# .NET build folders
+**/bin/
+**/obj/
