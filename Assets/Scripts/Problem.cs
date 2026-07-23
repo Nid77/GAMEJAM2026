@@ -1,18 +1,22 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using System.Collections.Generic;
 
-public class Problem : MonoBehaviour
+public class Problem : MonoBehaviour, IPointerClickHandler
 {
     public ProblemData data;
 
-    private void OnMouseDown() // ou un Collider2D + EventTrigger si UI/2D
-    {
-        UIManager.Instance.OpenProblemPopup(this);
+    public void OnPointerClick(PointerEventData eventData) // ou un Collider2D + EventTrigger si UI/2D
+    {   
+        //Debug.Log("Problem clicked");
+        //1Debug.Log("Question : " + data.questionText);
+        PopupSpawn.Instance.UpdatePopup(this);
     }
 
     public void Resolve(ProblemAnswer chosenAnswer)
     {
         foreach (var cost in chosenAnswer.costs)
+            //Debug.Log($"Cost: {cost.amount} {cost.type}");
             ResourceManager.Instance.Modify(cost.type, -cost.amount);
 
         foreach (var effect in chosenAnswer.effects)

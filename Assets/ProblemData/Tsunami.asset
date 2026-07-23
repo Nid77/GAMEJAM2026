@@ -14,13 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ProblemData
   title: Tsunami
   questionText: We need to build a wall ?
-  icon: {fileID: -4205624841535225538, guid: 3af295724c009ef4ba2f07cadfce677e, type: 3}
+  image: {fileID: 0}
   answers:
   - answerText: Yes
     costs:
     - type: 0
-      amount: 5
+      amount: 100
     effects: []
   - answerText: No
-    costs: []
+    costs:
+    - type: 2
+      amount: 50
     effects: []
