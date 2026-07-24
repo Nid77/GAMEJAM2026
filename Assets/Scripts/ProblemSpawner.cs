@@ -31,7 +31,7 @@ public class ProblemSpawner : MonoBehaviour
         }
     }
 
-    private void SpawnProblem()
+    public void SpawnProblem()
     {
         var zone = ZoneManager.Instance.GetRandomZone();
         var pos = zone.GetRandomPoint();

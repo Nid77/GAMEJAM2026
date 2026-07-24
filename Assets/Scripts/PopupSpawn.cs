@@ -44,6 +44,7 @@ public class PopupSpawn : MonoBehaviour
         
         problemData = data;
         questionText.text = problemData.questionText;
+        costText.text = "";
         gameObject.SetActive(true);
 
         GameObject currentLine = Instantiate(buttonLinePrefab, answers);

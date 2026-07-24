@@ -26,7 +26,7 @@ MonoBehaviour:
     costs:
     - type: 1
       amount: 150
-    - type: 3
+    - type: 2
       amount: 50
     effects: []
   - answerText: 'Dynamite river banks to flood nearby farms and save the factory. '
