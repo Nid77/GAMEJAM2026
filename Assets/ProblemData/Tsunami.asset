@@ -13,15 +13,23 @@ MonoBehaviour:
   m_Name: Tsunami
   m_EditorClassIdentifier: Assembly-CSharp::ProblemData
   title: Tsunami
-  questionText: We need to build a wall ?
+  questionText: 'Sudden Floods: Historic floods hit your industrial zone. Production
+    stopped.'
   image: {fileID: 0}
   answers:
-  - answerText: Yes
+  - answerText: Build urgent concrete dams and buy industrial pumps.
     costs:
     - type: 0
       amount: 100
     effects: []
-  - answerText: No
+  - answerText: Slowly evacuate machines; stop production for 3 months.
+    costs:
+    - type: 1
+      amount: 150
+    - type: 3
+      amount: 50
+    effects: []
+  - answerText: 'Dynamite river banks to flood nearby farms and save the factory. '
     costs:
     - type: 2
       amount: 50

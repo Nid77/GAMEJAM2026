@@ -14,13 +14,14 @@ public class Problem : MonoBehaviour, IPointerClickHandler
     }
 
     public void Resolve(ProblemAnswer chosenAnswer)
-    {
-        foreach (var cost in chosenAnswer.costs)
-            //Debug.Log($"Cost: {cost.amount} {cost.type}");
+    {   
+        foreach (var cost in chosenAnswer.costs) {
             ResourceManager.Instance.Modify(cost.type, -cost.amount);
+            Debug.Log("Current " + cost.type + ": " + ResourceManager.Instance.Get(cost.type));
+        }
 
-        foreach (var effect in chosenAnswer.effects)
-            ResourceManager.Instance.Modify(effect.type, effect.amount);
+        //foreach (var effect in chosenAnswer.effects)
+          //  ResourceManager.Instance.Modify(effect.type, effect.amount);
 
         ProblemSpawner.Instance.NotifyProblemResolved(this);
         Destroy(gameObject);
